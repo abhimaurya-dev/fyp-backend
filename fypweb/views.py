@@ -10,6 +10,7 @@ def predict(request):
   if(request.method == 'POST'):
     body = json.loads(request.body)
     query_array = body['query_array']
+    query_array = list(map(float,query_array))
     query_array = np.array(query_array).reshape(1,-1)
     response_data={}
     with open("mlmodel\\trainedModel\\trained_model",'rb') as f:
