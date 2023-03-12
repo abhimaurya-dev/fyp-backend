@@ -11,6 +11,7 @@ cffi==1.15.1
 cmake==3.24.3
 colorama==0.4.6
 contourpy==1.0.6
+cargo==0.3
 cycler==0.11.0
 debugpy==1.6.3
 decorator==5.1.1
