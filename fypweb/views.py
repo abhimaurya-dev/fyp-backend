@@ -1,11 +1,14 @@
-from django.http import JsonResponse
+from django.http import JsonResponse,HttpResponse
 import numpy as np
 import pickle
 from django.views.decorators.csrf import csrf_exempt
 import json
 
-@csrf_exempt 
+@csrf_exempt
+def home(reques):
+  return HttpResponse("<h1 style='display:flex; align-items:center; justify-content:center; width:100vw; font-size:4rem; height:100vh'>Welcome To Final Year Project Api</h1>")
 
+@csrf_exempt
 def predict(request):
   if(request.method == 'POST'):
     body = json.loads(request.body)
